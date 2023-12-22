@@ -16,6 +16,15 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+## Environment Variables
+
+Generate API key for Alchemy (provider)
+Generate Project ID on WalletConnect
+```
+VITE_ALCHEMY_API_KEY=""
+VITE_WALLET_CONNECT_PROJECT_ID=""
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
