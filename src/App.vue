@@ -3,7 +3,6 @@ import { testActions } from "viem"
 import WagmiConnector from "./components/WagmiConnector.vue"
 import WagmiGetAccount from "./components/WagmiGetAccount.vue"
 import WagmiSignMessage from "./components/WagmiSignMessage.vue"
-import Test from "./components/Test.vue"
 
 import {
   createWeb3Modal,
@@ -36,12 +35,7 @@ console.log("events:", events)
 
   <WagmiSignMessage />
 
-  <h1>Connector</h1>
-  <!-- <WagmiConnector /> -->
-
-  <Test />
-
-  <!-- Vue Boilerplate -->
+  <WagmiConnector />
 </template>
 
 <style scoped>
