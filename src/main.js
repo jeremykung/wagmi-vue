@@ -1,14 +1,22 @@
 import "./assets/main.css"
-
+// Vue
 import { createApp } from "vue"
-import { createPublicClient, http } from "viem"
 import App from "./App.vue"
 
+// Pinia
+import { createPinia } from "pinia"
+
+// Web 3
+import { createPublicClient, http } from "viem"
 import { createConfig, configureChains, mainnet, sepolia } from "@wagmi/core"
 import { arbitrum, polygon } from "@wagmi/core/chains"
 import { publicProvider } from "@wagmi/core/providers/public"
 import { alchemyProvider } from "@wagmi/core/providers/alchemy"
 
+// Pinia
+const pinia = createPinia()
+
+// Web 3
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [mainnet, arbitrum, polygon, sepolia],
   [
@@ -24,5 +32,5 @@ const config = createConfig({
 })
 
 const app = createApp(App)
-// app.use(UseWagmiPlugin, config)
+app.use(pinia)
 app.mount("#app")
